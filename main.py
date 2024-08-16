@@ -1,8 +1,12 @@
 # main.py
 from ascii_converter import ImageToASCII, ASCIIFormatter
-from ascii_converter.utils import get_file_extension, save_to_file
+from ascii_converter.utils import get_file_extension, save_to_file, save_colored_to_file
 import sys
 import os
+
+def ensure_dir(directory):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 
 def main():
     if len(sys.argv) < 2:
@@ -25,16 +29,24 @@ def main():
     
     print(colored_art)
 
+    # 출력 디렉토리 확인 및 생성
+    output_dir = "outputs"
+    ensure_dir(output_dir)
+
     # 출력 파일 저장 로직
     if len(sys.argv) > 2:
-        output_path = "outputs/" + sys.argv[2]
+        output_filename = sys.argv[2]
+        base_name, ext = os.path.splitext(output_filename)
     else:
         # 기본 출력 파일명 생성
         base_name = os.path.splitext(os.path.basename(image_path))[0]
-        output_path = "outputs/" + f"{base_name}_ascii.txt"
+        ext = ".txt"
 
-    print(output_path)
+    output_path = os.path.join(output_dir, f"{base_name}_ascii{ext}")
+    color_output_path = os.path.join(output_dir, f"{base_name}_ascii_color{ext}")
+
     save_to_file(bordered_art, output_path)  # 색상 없는 버전을 저장
+    save_colored_to_file(colored_art, color_output_path)  # 색상 있는 버전을 저장
 
 if __name__ == "__main__":
     main()

@@ -9,3 +9,8 @@ def save_to_file(content, output_path):
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(content)
     print(f"ASCII art saved to {output_path}")
+
+def save_colored_to_file(content, output_path):
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print(f"Colored ASCII art saved to {output_path}")
