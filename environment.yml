@@ -1,0 +1,46 @@
+name: ascii-converter
+channels:
+- pkgs/main
+dependencies:
+- _libgcc_mutex=0.1=main
+- _openmp_mutex=5.1=1_gnu
+- blas=1.0=openblas
+- bzip2=1.0.8=h5eee18b_6
+- ca-certificates=2024.7.2=h06a4308_0
+- colorama=0.4.6=py311h06a4308_0
+- freetype=2.12.1=h4a9f257_0
+- jpeg=9e=h5eee18b_3
+- lcms2=2.12=h3be6417_0
+- ld_impl_linux-64=2.38=h1181459_1
+- lerc=3.0=h295c915_0
+- libdeflate=1.17=h5eee18b_1
+- libffi=3.4.4=h6a678d5_1
+- libgcc-ng=11.2.0=h1234567_1
+- libgfortran-ng=11.2.0=h00389a5_1
+- libgfortran5=11.2.0=h1234567_1
+- libgomp=11.2.0=h1234567_1
+- libopenblas=0.3.21=h043d6bf_0
+- libpng=1.6.39=h5eee18b_0
+- libstdcxx-ng=11.2.0=h1234567_1
+- libtiff=4.5.1=h6a678d5_0
+- libuuid=1.41.5=h5eee18b_0
+- libwebp-base=1.3.2=h5eee18b_0
+- lz4-c=1.9.4=h6a678d5_1
+- ncurses=6.4=h6a678d5_0
+- numpy=1.26.4=py311h24aa872_0
+- numpy-base=1.26.4=py311hbfb1bba_0
+- openjpeg=2.5.2=he7f1fd0_0
+- openssl=3.0.14=h5eee18b_0
+- pillow=10.4.0=py311h5eee18b_0
+- pip=24.2=py311h06a4308_0
+- python=3.11.9=h955ad1f_0
+- readline=8.2=h5eee18b_0
+- setuptools=72.1.0=py311h06a4308_0
+- sqlite=3.45.3=h5eee18b_0
+- tk=8.6.14=h39e8969_0
+- tzdata=2024a=h04d1e81_0
+- wheel=0.43.0=py311h06a4308_0
+- xz=5.4.6=h5eee18b_1
+- zlib=1.2.13=h5eee18b_1
+- zstd=1.5.5=hc292b87_2
+
